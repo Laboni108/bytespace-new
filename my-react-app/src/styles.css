@@ -1,0 +1,644 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background: #d3dae8;
+  color: #1e293b;
+  transition: 0.3s;
+}
+h2 {
+   position: fixed;
+  top: 20px;
+  Right: 20px;
+
+  width: 35px;
+  height: 35px;
+}
+.home {
+  min-height: calc(100vh - 120px);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ================= HAMBURGER BUTTON ================= */
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 35px;
+  height: 35px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: white;
+  color: #1e293b;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1100;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  transition: 0.2s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.05);
+  background: #e8e9ea;
+ 
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  opacity: 0.95;
+  background: rgb(50, 43, 77);
+  border-right: 1px solid #e5e7eb;
+
+  padding: 25px 15px;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 3%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  /*
+    Sidebar starts outside the screen
+  */
+  transform: translateX(-100%);
+
+  /*
+    Smooth sliding animation
+  */
+  transition: transform 0.3s ease;
+
+  /*
+    Keep sidebar above overlay
+  */
+  z-index: 1000;
+
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Sidebar appears */
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+
+/* ================= SIDEBAR OVERLAY ================= */
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  z-index: 900;
+  
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+
+  padding: 10px 15px 35px;
+}
+
+.logo span {
+  margin-right: 8px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu {
+  width: 100%;
+
+  border: none;
+  background: transparent;
+
+  padding: 13px 15px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  color: white;
+
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+.menu:hover {
+  background: #f1f5f9;
+  color: #111827;
+}
+
+.menu.active {
+  background: #e8eefc;
+  color: #86a5e8;
+  font-weight: bold;
+  opacity: 0.80;
+}
+
+.icon {
+  width: 25px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* ================= SIDEBAR BOTTOM ================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+/* ================= MAIN ================= */
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 35px 45px;
+
+  /*
+    No margin-left anymore.
+    The page takes the entire screen.
+  */
+  margin-left: 0;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  /*
+    Give space so hamburger doesn't overlap title
+  */
+  padding-left: 60px;
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.header p {
+  color: #64748b;
+}
+
+
+/* ================= PROFILE ================= */
+
+.profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.profile small {
+  display: block;
+
+  color: #64748b;
+
+  margin-top: 3px;
+}
+
+
+/* ================= AVATAR ================= */
+
+.avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #560960;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+
+
+
+/* ================= WELCOME ================= */
+
+.welcome {
+  background: white;
+
+  border-radius: 15px;
+
+  margin-top: 25px;
+
+  padding: 30px;
+
+  border: 1px solid #e5e7eb;
+}
+
+.welcome h2 {
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: #64748b;
+
+  line-height: 1.7;
+}
+
+
+/* ================= CONTENT BOX ================= */
+
+.content-box {
+  background: white;
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  border: 1px solid #e5e7eb;
+}
+
+.content-box h2 {
+  margin-bottom: 25px;
+}
+
+
+/* ================= NOTIFICATIONS ================= */
+
+.notification {
+  display: flex;
+
+  gap: 15px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.notification span {
+  font-size: 24px;
+}
+
+.notification p {
+  margin-top: 5px;
+
+  color: #64748b;
+}
+
+
+/* ================= MY PEOPLE ================= */
+
+.my_people {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.my_people p {
+  margin-top: 5px;
+
+  color: #64748b;
+}
+
+
+/* ================= SETTINGS ================= */
+
+.setting {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.setting p {
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-top: 5px;
+}
+
+
+/* ================= TOGGLE ================= */
+
+.toggle {
+  width: 48px;
+  height: 26px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: rgb(227, 208, 229);
+
+  padding: 3px;
+
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  background: rgb(122, 50, 122);;
+
+  border-radius: 50%;
+
+  transition: 0.2s;
+}
+
+.toggle.on {
+  background: rgb(242, 215, 245);
+}
+
+.toggle.on span {
+  transform: translateX(22px);
+}
+
+
+/* ================= FONT CONTROLS ================= */
+
+.font-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.font-controls button {
+  border: 1px solid #cbd5e1;
+
+  background: white;
+
+  border-radius: 6px;
+
+  padding: 7px 12px;
+
+  cursor: pointer;
+}
+
+.font-controls button:hover {
+  background: white;
+}
+
+
+/* ================= DARK MODE ================= */
+
+.app.dark {
+  background: #0f172a;
+
+  color: white;
+}
+
+.app.dark .sidebar,
+.app.dark .card,
+.app.dark .welcome,
+.app.dark .content-box {
+  background: #1e293b;
+
+  border-color: #334155;
+}
+
+.app.dark .menu {
+  color: white;
+}
+
+.app.dark .menu:hover {
+  background: #334155;
+}
+
+.app.dark .menu.active {
+  background: #76598e;
+  opacity: 0.95;
+  color: white;
+}
+
+.app.dark .header p,
+.app.dark .card h3,
+.app.dark .card p,
+.app.dark .welcome p,
+.app.dark .notification p,
+.app.dark .my_people p,
+.app.dark .setting p {
+  color:  white;
+}
+
+.app.dark .notification,
+.app.dark .my_people,
+.app.dark .setting {
+  border-color: #334155;
+}
+
+.app.dark .font-controls button {
+  background: #334155;
+
+  color: white;
+
+  border-color: #475569;
+}
+
+
+/* ================= DARK MODE HAMBURGER ================= */
+
+.app.dark .hamburger {
+  background: #1e293b;
+
+  color: white;
+
+  border: 1px solid #334155;
+}
+
+.app.dark .hamburger:hover {
+  background: #334155;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .main {
+    padding: 25px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+  .sidebar {
+    width: 260px;
+  }
+
+  .main {
+    padding: 20px;
+
+    padding-top: 80px;
+  }
+
+  .header {
+    padding-left: 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .profile div:last-child {
+    display: none;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .setting {
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .hamburger {
+    top: 15px;
+    left: 15px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .main {
+    padding: 15px;
+
+    padding-top: 75px;
+  }
+
+  .content-box {
+    padding: 20px;
+  }
+
+  .welcome {
+    padding: 20px;
+  }
+
+}

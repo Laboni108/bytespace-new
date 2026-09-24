@@ -1,0 +1,63 @@
+.pro {
+  width:300px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgb(180, 234, 220);
+  color:black;
+  text-align: center;
+  box-shadow: 0 14px 30px rgb(0, 0,0,0.55);
+  justify-content: space-between;
+ 
+}
+
+.pro.h1 {
+  color:black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+
+}
+.pro .p{
+   color: rgb(238, 236, 236);
+}
+
+.gu {
+  background-color: rgb(47, 79, 110);
+  justify-content: space-between;
+  text-align: left;
+}
+.gu button {
+  text-align: left;
+  border: none;
+  background: none;
+  padding:5px;
+  color:white;
+  cursor: pointer;
+}
+.gu button:hover {
+  background-color: rgb(187, 216, 216);
+}
+
+.alert {
+  width: 100px;
+  padding: 5px;
+  top:50%;
+  margin-left: 40px;
+  background: rgb(149, 221, 230);
+  border-radius: 10px;
+  position: fixed;
+}
+.alert button{
+  border: none;
+  background: none;
+  background-color: rgb(19, 20, 20);
+  color:aliceblue;
+  box-shadow: 0 14px 30ps rgb(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+.alert button :hover{
+  background-color: brown;
+}
+.alert h3{
+  color:brown
+}
