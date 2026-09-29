@@ -32,8 +32,9 @@ export default function Testimonials() {
   className="py-20"
   style={{
     background:
-      "radial-gradient(circle at 78% 15%, #ebefa7 0%, transparent 45%), " +
-      "linear-gradient(to top, #b0d7ef 0%, transparent 45%), " +
+      "radial-gradient(circle at 63% 30%, #ebf096 0%, transparent 25%), " +
+      "radial-gradient(circle at 99% 30%, #edf0b4 0%, transparent 10%), " +
+      "radial-gradient(circle at 12% 92%, #c4d7f1 0%, transparent 20%), " +
       "#ffffff",
   }}
 >
@@ -44,10 +45,10 @@ export default function Testimonials() {
           </h2>
           <p className="max-w-md text-sm text-shuttle-500">
             At ByteSpace, our vibrant community of learners and creators is at
-            the heart of what we do. Hear directly from those who have
-            experienced the transformative journey of learning and creating on
-            our platform. Explore testimonials that reflect the diverse
-            perspectives of enthusiastic learners and accomplished creators.
+            the<br/> heart of what we do. Hear directly from those who have
+            experienced the<br/> transformative journey of learning and creating on
+            our platform. Explore<br/> testimonials that reflect the diverse
+            perspectives of enthusiastic learners<br/> and accomplished creators.
           </p>
         </div>
 
