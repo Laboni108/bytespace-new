@@ -28,7 +28,15 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-20">
+    <section
+  className="py-20"
+  style={{
+    background:
+      "radial-gradient(circle at 78% 15%, #ebefa7 0%, transparent 45%), " +
+      "linear-gradient(to top, #b0d7ef 0%, transparent 45%), " +
+      "#ffffff",
+  }}
+>
       <div className="mx-auto max-w-[1200px] px-5 xl:px-0">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="max-w-sm text-[28px] sm:text-[36px]">
@@ -45,7 +53,7 @@ export default function Testimonials() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
-            <div key={t.name} className="rounded-2xl border border-shuttle-200 bg-shuttle-50 p-6">
+            <div key={t.name} className="rounded-2xl bg-white p-6 shadow-sm">
               <img src={t.photo} alt={t.name} className="h-12 w-12 rounded-full object-cover" />
               <p className="mt-4 text-sm font-semibold text-shuttle-950">{t.name}</p>
               <p className="text-xs text-primary-700">{t.role}</p>
