@@ -36,6 +36,7 @@ export default function Growth() {
         background:
           "radial-gradient(circle at 20% 5%, #e5ea9d 0%, transparent 25%), " +
           "radial-gradient(circle at 12% 92%, #e5ea9d 0%, transparent 15%), " +
+          "radial-gradient(circle at 10% 50%, #b9d8eb 0%, transparent 20%), " +
           "radial-gradient(circle at 92% 88%, #c6e4f7 0%, transparent 28%), " +
           "#ffffff",
       }}

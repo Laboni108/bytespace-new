@@ -28,13 +28,12 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 xl:px-0">
         <div className="mx-auto max-w-2xl pt-10 text-center">
           <h1 className="text-[36px] leading-[1.2] text-white sm:text-[56px] lg:text-[64px]">
-            Get Access to Hundreds Courses Available
-          </h1>
-          <p className="mx-auto mt-4 max-w-lg text-sm text-white/80 sm:text-base">
-            Unlock your creativity, gain valuable knowledge, and grow your business
-            with our wide range of courses.
-          </p>
-
+  Get Access to Hundreds<br />Courses Available
+</h1>
+          <p className="mx-auto mt-4 max-w-none text-sm text-white/80 sm:text-base sm:whitespace-nowrap">
+  Unlock your creativity, gain valuable knowledge, and grow your business
+  with our wide range of courses.
+</p>
           <form className="mx-auto mt-8 flex w-full max-w-[581px] flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
             <div className="flex w-full items-center gap-2 rounded-full bg-white px-6 py-3 sm:max-w-[461px]">
               <Search size={18} className="shrink-0 text-shuttle-400" />
@@ -54,8 +53,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Visual stage: height comes naturally from the photo itself,
-          so there's no leftover blue gap before the next section. */}
+     
       <div className="relative mx-auto mt-6 w-full max-w-[1440px]">
         {/* Lime circle behind the photo */}
         <div
@@ -64,15 +62,14 @@ export default function Hero() {
         />
 
         {/* Decorative shapes */}
-        <img src={squiggleLime} alt="" className="absolute hidden opacity-90 sm:block" style={stagePos(-118, -291, 385, 385)} />
-        <img src={squiggleWhite} alt="" className="absolute hidden rotate-180 opacity-90 sm:block" style={stagePos(183, -35, 175, 175)} />
-        <img src={ring} alt="" className="absolute hidden opacity-90 sm:block" style={stagePos(60, 170, 342, 342)} />
-        <img src={triangle} alt="" className="absolute hidden opacity-90 sm:block" style={stagePos(1106, -48, 188, 188)} />
-        <img src={squiggleWhite} alt="" className="absolute hidden opacity-90 sm:block" style={stagePos(1127, 160, 330, 330)} />
-        <img src={blobLime} alt="" className="absolute hidden opacity-90 sm:block" style={stagePos(1231, -291, 370, 370)} />
+        <img src={squiggleLime} alt="" className="absolute hidden  sm:block" style={stagePos(-118, -291, 385, 385)} />
+        <img src={squiggleWhite} alt="" className="absolute hidden rotate-180  sm:block" style={stagePos(183, -35, 175, 175)} />
+        <img src={ring} alt="" className="absolute hidden  sm:block" style={stagePos(60, 170, 342, 342)} />
+        <img src={triangle} alt="" className="absolute hidden  sm:block" style={stagePos(1106, -48, 188, 188)} />
+        <img src={squiggleWhite} alt="" className="absolute hidden  sm:block" style={stagePos(1127, 160, 330, 330)} />
+        <img src={blobLime} alt="" className="absolute hidden  sm:block" style={stagePos(1231, -291, 370, 370)} />
 
-        {/* Student photo — normal flow, centered, native aspect ratio.
-            Its real rendered height decides how tall this whole block is. */}
+       
         <img
           src={heroPhoto}
           alt="Student learning online"

@@ -58,7 +58,7 @@ export default function Testimonials() {
               <img src={t.photo} alt={t.name} className="h-12 w-12 rounded-full object-cover" />
               <p className="mt-4 text-sm font-semibold text-shuttle-950">{t.name}</p>
               <p className="text-xs text-primary-700">{t.role}</p>
-              <p className="mt-4 text-sm italic text-shuttle-500">"{t.quote}"</p>
+              <p className="mt-4 text-sm text-shuttle-500">"{t.quote}"</p>
             </div>
           ))}
         </div>

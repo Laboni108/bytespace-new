@@ -22,7 +22,7 @@ export default function CTA() {
       <img src={triangle} alt="" className="absolute hidden opacity-90 sm:block" style={pos(-48, 225, 188, 188)} />
       <img src={triangleLime} alt="" className="absolute hidden opacity-90 sm:block" style={pos(1080, 5, 188, 188)} />
       <img src={blobWhite} alt="" className="absolute hidden opacity-90 sm:block" style={pos(1226, 6, 370, 370)} />
-      <img src={ringLime} alt="" className="absolute hidden opacity-90 sm:block" style={pos(20, 299, 342, 342)} />
+      <img src={ringLime} alt="" className="absolute hidden opacity-90 sm:block" style={pos(20, 250, 342, 342)} />
       <img src={squiggleLime} alt="" className="absolute hidden opacity-90 sm:block" style={pos(1110, 289, 330, 330)} />
 
       <div className="relative mx-auto max-w-[700px] px-5 text-center">
