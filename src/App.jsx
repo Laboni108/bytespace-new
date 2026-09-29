@@ -4,6 +4,8 @@ import LogoStrip from "./components/sections/LogoStrip";
 import Courses from "./components/sections/Courses";
 import CategoryIcons from "./components/sections/CategoryIcons";
 import Growth from "./components/sections/Growth";
+import CTA from "./components/sections/CTA";
+import Testimonials from "./components/sections/Testimonials";
 import Footer from "./components/layout/Footer";
 
 export default function App() {
@@ -17,6 +19,8 @@ export default function App() {
       <Courses />
       <CategoryIcons />
       <Growth />
+      <CTA />
+      <Testimonials />
       <Footer />
     </div>
   );
