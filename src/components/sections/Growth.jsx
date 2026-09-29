@@ -32,7 +32,7 @@ const femalePos = posIn(541, 596);
 
 export default function Growth() {
   return (
-    <section className="bg-gradient-to-br from-lime-50 via-white to-primary-50 py-20">
+    <section className="bg-gradient-to-br from-lime-50 via-white via-40% to-primary-50 py-20">
       <div className="mx-auto flex max-w-[1200px] flex-col gap-24 px-5 xl:px-0">
         {/* Row 1: text (574px) + photo stage (621px), gap 63px */}
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-[63px]">
@@ -60,7 +60,10 @@ export default function Growth() {
           </div>
 
           {/* Visual stage: 621 x 552 */}
-          <div className="relative w-full lg:flex-1" style={{ paddingTop: `${(552 / 621) * 100}%` }}>
+          <div
+            className="relative w-full lg:min-w-0 lg:max-w-[621px] lg:flex-1"
+             style={{ aspectRatio: "621 / 552" }}
+                >
             {/* Mini course card peeking out behind the photo */}
             <div
               className="absolute overflow-hidden rounded-2xl border border-shuttle-200 bg-white"
@@ -123,7 +126,10 @@ export default function Growth() {
           </div>
 
           {/* Visual stage: 541 x 596 */}
-          <div className="relative w-full lg:flex-1" style={{ paddingTop: `${(596 / 541) * 100}%` }}>
+          <div
+            className="relative w-full lg:min-w-0 lg:max-w-[541px] lg:flex-1"
+                  style={{ aspectRatio: "541 / 596" }}
+                        >
             <img
               src={growthPhoto2}
               alt="Course creator"
@@ -134,7 +140,7 @@ export default function Growth() {
             <img src={squiggleLime} alt="" className="absolute hidden opacity-90 sm:block" style={femalePos(305, 114, 215, 215)} />
 
             <div
-              className="absolute z-20 flex flex-col gap-2 rounded-2xl bg-primary-800 p-4 shadow-lg"
+              className="absolute z-0 flex flex-col gap-2 rounded-2xl bg-primary-800 p-4 shadow-lg"
               style={femalePos(0, 44, 232, 119)}
             >
               <p className="text-[10px] text-white/70">Total Revenue</p>
@@ -153,7 +159,7 @@ export default function Growth() {
             </div>
 
             <div
-              className="absolute z-20 flex flex-col gap-2 rounded-2xl bg-white p-4 shadow-lg"
+              className="absolute z-30 flex flex-col gap-2 rounded-2xl bg-white p-4 shadow-lg"
               style={femalePos(283, 413, 258, 123)}
             >
               <p className="text-xs font-medium text-shuttle-950">Happy Students</p>
