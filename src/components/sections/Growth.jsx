@@ -36,7 +36,7 @@ export default function Growth() {
         background:
           "radial-gradient(circle at 20% 5%, #e5ea9d 0%, transparent 25%), " +
           "radial-gradient(circle at 12% 92%, #e5ea9d 0%, transparent 15%), " +
-          "radial-gradient(circle at 92% 88%, #c6e4f7 0%, transparent 18%), " +
+          "radial-gradient(circle at 92% 88%, #c6e4f7 0%, transparent 28%), " +
           "#ffffff",
       }}
     >
@@ -133,7 +133,7 @@ export default function Growth() {
             <ul className="flex flex-col gap-3">
               {checklist.map((item) => (
                 <li key={item} className="flex items-center gap-2 text-sm text-shuttle-700">
-                  <CheckCircle2 size={18} className="shrink-0 text-primary-700" />
+                  <CheckCircle2 size={18} className="shrink-0 fill-primary-700 text-white" />
                   {item}
                 </li>
               ))}
