@@ -34,9 +34,9 @@ export default function Growth() {
       className="py-20"
       style={{
         background:
-          "radial-gradient(circle at 30% 5%, #fdffe4 0%, transparent 38%), " +
-          "radial-gradient(circle at 12% 92%, #fdffe4 0%, transparent 38%), " +
-          "radial-gradient(circle at 92% 88%, #e7f6ff 0%, transparent 48%), " +
+          "radial-gradient(circle at 20% 5%, #e5ea9d 0%, transparent 25%), " +
+          "radial-gradient(circle at 12% 92%, #e5ea9d 0%, transparent 15%), " +
+          "radial-gradient(circle at 92% 88%, #c6e4f7 0%, transparent 18%), " +
           "#ffffff",
       }}
     >
@@ -49,10 +49,10 @@ export default function Growth() {
                 Your Path to Professional Growth Starts Here!
               </h2>
               <p className="mt-4 text-sm text-shuttle-500">
-                Explore our curated selection of courses tailored to enhance
-                your capabilities and accelerate your career journey. Whether
-                you are looking to sharpen specific skills, gain industry
-                expertise, or embark on a new career path entirely, we have
+                Explore our curated selection of courses tailored to enhance<br/>
+                your capabilities and accelerate your career journey.<br/> Whether
+                you are looking to sharpen specific skills, gain<br/> industry
+                expertise, or embark on a new career path entirely,<br/> we have
                 the resources you need.
               </p>
             </div>
@@ -123,10 +123,10 @@ export default function Growth() {
         <div className="flex flex-col items-center gap-10 lg:flex-row-reverse lg:items-start lg:gap-[79px]">
           <div className="flex w-full flex-col gap-6 pt-2 lg:w-[620px] lg:shrink-0">
             <div>
-              <h2 className="text-[30px] sm:text-[38px]">Create &amp; Manage Courses Easily.</h2>
+              <h2 className="text-[30px] sm:text-[38px]">Create &amp; Manage<br/> Courses Easily.</h2>
               <p className="mt-4 text-base text-shuttle-500">
                 <span className="font-medium text-shuttle-700">ByteSpace</span>{" "}
-                supports individuals or entities in the creation, publication,
+                supports individuals or entities in the creation, publication,<br/>
                 and administration of educational courses.
               </p>
             </div>
