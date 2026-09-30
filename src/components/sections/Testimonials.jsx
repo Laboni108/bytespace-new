@@ -39,10 +39,10 @@ export default function Testimonials() {
   }}
 >
       <div className="mx-auto max-w-[1200px] px-5 xl:px-0">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="max-w-sm text-[28px] sm:text-[36px]">
-            Discover What Our Community Is Saying
-          </h2>
+  <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+    <h2 className="max-w-[520px] text-[28px] sm:text-[36px]">
+      Discover What Our Community Is Saying
+    </h2>
           <p className="max-w-md text-sm text-shuttle-500">
             At ByteSpace, our vibrant community of learners and creators is at
             the<br/> heart of what we do. Hear directly from those who have
