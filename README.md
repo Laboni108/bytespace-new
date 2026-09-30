@@ -1,6 +1,7 @@
 # ByteSpace — Landing Page
 
 A pixel-accurate rebuild of the ByteSpace landing page from Figma, built with React, Vite, and Tailwind CSS.
+**Figma link** - https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1&p=f&t=eQOrqJmq6rMG5b6L-0
 **Vercel live link** - https://bytespace-new-euw9.vercel.app/
 ## Tech Stack
 
@@ -9,39 +10,95 @@ A pixel-accurate rebuild of the ByteSpace landing page from Figma, built with Re
 - **lucide-react** — icon library used throughout (nav, cards, checklist, category icons)
 
 ## Project Structure
+```text
 src/
-assets/images/ All exported Figma assets (photos, SVG shapes, logos)
-components/
-layout/ Navbar.jsx, Footer.jsx — appear once, on every page
-sections/ One component per landing page section
-App.jsx Assembles all sections into the final page
-index.css Tailwind theme: colors, fonts, base styles
-
+├── assets/
+│   └── images/
+│       └── All exported Figma assets (photos, SVG shapes, logos)
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   │       └── Appear once on every page
+│   │
+│   └── sections/
+│       └── One component per landing page section
+│
+├── App.jsx
+│   └── Assembles all sections into the final page
+│
+└── index.css
+    └── Tailwind theme: colors, fonts, base styles
+```
 ## Reusable Code Patterns
 
-Rather than writing repeated HTML for repeated content, each section stores its content in a **JavaScript array** and loops over it with `.map()`. This means adding, removing, or editing content is a one-line data change, not a copy-pasted block of JSX. Used in:
+The project uses reusable components and data-driven rendering to keep the code clean and easy to maintain. Instead of repeating the same JSX for similar content, sections store their content in JavaScript arrays and render it using `.map()`.
 
-- **Navbar.jsx** — `navLinks` / `authLinks` arrays render the nav and mobile menu links.
-- **Footer.jsx** — `footerLinks` (array of arrays) renders all 3 footer link columns.
-- **Hero.jsx** — `partnerLogos` moved to its own component (`LogoStrip.jsx`), same array pattern.
-- **Courses.jsx** — `categoryRows` renders the 3 rows of filter pills; `courses` array feeds a single `CourseCard` function into 6 rendered cards.
-- **CategoryIcons.jsx** — `categories` array (label + icon) renders all 6 category cards.
-- **Growth.jsx** — `stats` and `checklist` arrays render the stat numbers and checkmark list.
-- **Testimonials.jsx** — `testimonials` array renders all 3 review cards from one JSX template.
+### Data-Driven Components
 
-Other reusable patterns:
+* **Navbar.jsx**
+  Uses `navLinks` and `authLinks` arrays to render navigation links for both desktop and mobile menus.
 
-- **`stagePos()` / `posIn()` / `pos()` helper functions** (in `Hero.jsx`, `Growth.jsx`, `CTA.jsx`) convert Figma's raw Left/Top/Width/Height pixel values into percentages, so decorative shapes and floating cards scale proportionally at any screen size instead of using fixed pixel positions.
-- **Shared color/font tokens** defined once in `index.css` (`primary`, `lime`, `shuttle` color scales; `Poppins` for headings, `Satoshi` for body) and reused via Tailwind classes across every component, so the whole site's look is controlled from one place.
+* **Footer.jsx**
+  Uses the `footerLinks` array to generate the three footer link columns from a single reusable structure.
+
+* **LogoStrip.jsx**
+  The partner logos from the Hero section are stored in a `partnerLogos` array and rendered dynamically.
+
+* **Courses.jsx**
+  Uses:
+
+  * `categoryRows` to render the course filter pills.
+  * `courses` to provide the data for all course cards.
+  * A reusable `CourseCard` component to keep the card layout consistent.
+
+* **CategoryIcons.jsx**
+  Uses a `categories` array containing each category's label and icon to render all six category cards.
+
+* **Growth.jsx**
+  Uses `stats` and `checklist` arrays to render the statistics and checklist items.
+
+* **Testimonials.jsx**
+  Uses a `testimonials` array to render all three testimonial cards using the same reusable layout.
+
+### Responsive Positioning
+
+Several decorative elements and floating cards use helper functions such as `stagePos()`, `posIn()`, and `pos()` in `Hero.jsx`, `Growth.jsx`, and `CTA.jsx`.
+
+These helpers convert the original Figma `Left`, `Top`, `Width`, and `Height` values into percentage-based positions. This allows the elements to scale and maintain their relative positions across different screen sizes instead of relying entirely on fixed pixel values.
+
+### Shared Design Tokens
+
+Common colors and typography are defined centrally in `index.css` and reused throughout the project with Tailwind classes.
+
+The main design tokens include:
+
+* `primary` — primary brand color
+* `lime` — accent color
+* `shuttle` — supporting neutral color
+* **Poppins** — used primarily for headings
+* **Satoshi** — used primarily for body text
+
+Keeping these values in one place makes it easier to maintain a consistent visual style and update the design when needed.
 
 ## Getting Started
 
+Install the project dependencies:
+
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-## Build
+## Production Build
+
+To create a production-ready build:
 
 ```bash
 npm run build
@@ -49,10 +106,17 @@ npm run build
 
 ## Pages
 
-- `/` — Landing page (required)
-- Login / Signup — bonus, not yet implemented in this branch *(remove this line if you added them)*
+### Landing Page
 
-## Notes for Reviewer
+`/` — Main ByteSpace landing page based on the provided Figma design.
 
-- Built section-by-section against the provided Figma file, matching exact measurements (spacing, positions, colors, typography) where available.
-- Some minor decorative shape positions are close visual approximations where Figma's inspector didn't expose an exact value.
+### Login / Signup
+
+Login and Signup pages are not implemented in the current branch.
+
+## Notes for Review
+
+The landing page was built section-by-section based on the provided Figma design. The implementation follows the available Figma measurements for spacing, positioning, colors, typography, and overall layout.
+
+Where exact values were not available in the Figma inspector, a few decorative elements use close visual approximations while maintaining the intended design and responsiveness.
+
