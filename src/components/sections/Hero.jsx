@@ -26,8 +26,8 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-primary-800 pt-4">
       {/* Heading + search */}
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 xl:px-0">
-        <div className="mx-auto max-w-2xl pt-10 text-center">
-          <h1 className="text-[36px] leading-[1.2] text-white sm:text-[56px] lg:text-[64px]">
+        <div className="relative z-10 mx-auto max-w-4xl pt-10 text-center">
+        <h1 className="text-[36px] leading-[1.2] text-white sm:whitespace-nowrap sm:text-[56px] lg:text-[64px]">
   Get Access to Hundreds<br />Courses Available
 </h1>
           <p className="mx-auto mt-4 max-w-none text-sm text-white/80 sm:text-base sm:whitespace-nowrap">
